@@ -17,33 +17,30 @@ export type Font = {
 export type Theme = {
   dark: ThemeConfig
   light: ThemeConfig
+  desert: ThemeConfig
+  green: ThemeConfig
 }
 
 export type Colors = {
-  brand: {
+  main: {
     primary_01: string
-    primary_02: string
-    secondary_01: string
   }
-  button: string
-  background: string
-  foreground: string
-  aside_foreground: string
-  background_auxiliar: string
-
-  text: string
-  text_subtitle: string
-  text_description: string
-  title_highlight: string
-  title_background_highlight: string
-  text_timer: string
-
-  divider: string
-  hover_background_auxiliar: string
-  hover_brand_primary: string
-
-  white: string
-  black: string
+  default: {
+    white: string
+    black: string
+  }
+  background: {
+    background: string
+    foreground: string
+  }
+  typografy: {
+    text: string
+    title: string
+  }
+  util: {
+    hover: string
+    divider: string
+  }
 }
 
 export type Spacements = {
@@ -67,8 +64,7 @@ export type Typography = {
 }
 
 export type Assets = {
-  backgroundCamp: string
-  backgroundCampPrelive: string
+  test: string
 }
 
 export type ThemeConfig = {

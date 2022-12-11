@@ -1,44 +1,33 @@
 import { useEffect, createContext, useState } from 'react'
 import { ThemeProvider as ThemeProviderStyle } from 'styled-components'
-import { theme } from 'theme'
-import { appConfig } from 'util/config'
+import { Children } from 'types/Global'
+import { Theme } from 'types/Theme'
 
-enum ThemeType {
-  light = 'light',
-  dark = 'dark'
-}
+import { appConfig } from 'util/config'
+import { theme as themes } from 'util/theme'
 
 type ThemeContextType = {
-  theme: ThemeType
-  toggleTheme: () => void
+  theme: string
+  toggleTheme: (newTheme: string) => void
 }
 
 export const ThemeContext = createContext<ThemeContextType>({
-  theme: ThemeType.light,
+  theme: 'light',
   toggleTheme: () => undefined
 })
 
-const themes = {
-  dark: theme.dark,
-  light: theme.light
-}
-
-export const ThemeProvider = ({ children }: any) => {
-  const [theme, setTheme] = useState<ThemeType>(ThemeType.light)
+export const ThemeProvider = ({ children }: Children) => {
+  const [theme, setTheme] = useState<string>('light')
 
   const loadTheme = async () => {
     if (typeof window !== 'undefined') {
       const storagedTheme = window.localStorage.getItem(
         `${appConfig.appName}:theme`
       )
-
       if (storagedTheme) {
-        setTheme(ThemeType[storagedTheme as ThemeType])
+        setTheme(storagedTheme)
       } else {
-        window.localStorage.setItem(
-          `${appConfig.appName}:theme`,
-          ThemeType.light
-        )
+        window.localStorage.setItem(`${appConfig.appName}:theme`, 'light')
       }
     }
   }
@@ -47,24 +36,19 @@ export const ThemeProvider = ({ children }: any) => {
     loadTheme()
   }, [])
 
-  const toggleTheme = () => {
+  const toggleTheme = (newTheme: string) => {
     if (typeof window !== 'undefined') {
-      let selectedTheme
-
-      if (theme === ThemeType.light) {
-        selectedTheme = ThemeType.dark
-      } else {
-        selectedTheme = ThemeType.light
-      }
-
-      setTheme(selectedTheme)
-      window.localStorage.setItem(`${appConfig.appName}:theme`, selectedTheme)
+      setTheme(newTheme)
+      console.log('new', newTheme)
+      window.localStorage.setItem(`${appConfig.appName}:theme`, newTheme)
     }
   }
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <ThemeProviderStyle theme={themes[theme]}>{children}</ThemeProviderStyle>
+      <ThemeProviderStyle theme={themes[theme as keyof Theme]}>
+        {children}
+      </ThemeProviderStyle>
     </ThemeContext.Provider>
   )
 }

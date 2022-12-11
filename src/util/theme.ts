@@ -7,6 +7,7 @@ const palette: ColorPalette = {
     300: '#FF0000'
   },
   green: {
+    50: '#00C5A5',
     100: '#00BD69',
     200: '#008000'
   },
@@ -27,82 +28,126 @@ const palette: ColorPalette = {
     400: '#151515'
   },
   blue: {
+    50: '#0085FF',
     100: '#0C2249',
     200: '#1C1A38',
     300: '#06042B'
   },
-  orange: '#FF9F49',
+  orange: {
+    100: '#ffe4c4',
+    200: '#FF9F49',
+    300: '#FF9F70'
+  },
   white: '#FFFFFF',
-  black: '#000000'
+  black: '#000000',
+  yellow: '#EBFF00'
 }
 
 export const theme: Theme = {
   dark: {
     colors: {
-      brand: {
-        primary_01: palette.red[100],
-        primary_02: palette.white as string,
-        secondary_01: palette.blue[200]
+      main: {
+        primary_01: palette.yellow as string
       },
-      button: palette.blue[100],
-      background: palette.white as string,
-      foreground: palette.white as string,
-      aside_foreground: palette.gray[200],
-      background_auxiliar: palette.gray[300],
-
-      text: palette.blue[300],
-      text_description: palette.gray[600],
-      text_subtitle: palette.gray[600],
-      title_highlight: palette.blue[300],
-      title_background_highlight: palette.gray[200],
-      text_timer: palette.dark_gray[50],
-
-      divider: `${palette.black}1A`,
-      hover_background_auxiliar: `${palette.black}1A`,
-      hover_brand_primary: `${palette.red[100]}33`,
-
-      white: palette.white as string,
-      black: palette.black as string
+      default: {
+        white: palette.white as string,
+        black: palette.black as string
+      },
+      background: {
+        background: palette.black as string,
+        foreground: palette.dark_gray[100]
+      },
+      typografy: {
+        text: palette.black as string,
+        title: palette.white as string
+      },
+      util: {
+        hover: palette.dark_gray[50],
+        divider: '#000'
+      }
     },
     assets: {
-      backgroundCamp:
-        'https://cdn.playscores.com/web-whitelabel/header-bg/bg-live.png',
-      backgroundCampPrelive:
-        'https://cdn.playscores.com/web-whitelabel/header-bg/bg-prelive.png'
+      test: ''
     }
   },
   light: {
     colors: {
-      brand: {
-        primary_01: palette.red[100],
-        primary_02: palette.white as string,
-        secondary_01: palette.blue[200]
+      main: {
+        primary_01: palette.blue[50]
       },
-      button: palette.green[100],
-      background: palette.black as string,
-      foreground: palette.dark_gray[400],
-      aside_foreground: palette.dark_gray[300],
-      background_auxiliar: palette.dark_gray[100],
-
-      text: palette.white as string,
-      text_description: palette.white as string,
-      text_subtitle: palette.gray[300],
-      title_highlight: palette.gray[100],
-      title_background_highlight: palette.dark_gray[200],
-      text_timer: palette.white as string,
-
-      divider: `${palette.white}1A`,
-      hover_background_auxiliar: `${palette.dark_gray[100]}b3`,
-      hover_brand_primary: `${palette.red[100]}b3`,
-
-      white: palette.white as string,
-      black: palette.black as string
+      default: {
+        white: palette.white as string,
+        black: palette.black as string
+      },
+      background: {
+        background: palette.white as string,
+        foreground: palette.gray[500]
+      },
+      typografy: {
+        text: palette.white as string,
+        title: palette.black as string
+      },
+      util: {
+        hover: palette.gray[100],
+        divider: '#000'
+      }
     },
     assets: {
-      backgroundCamp:
-        'https://cdn.playscores.com/web-whitelabel/header-bg/bg-live.png',
-      backgroundCampPrelive:
-        'https://cdn.playscores.com/web-whitelabel/header-bg/bg-prelive.png'
+      test: ''
+    }
+  },
+
+  desert: {
+    colors: {
+      main: {
+        primary_01: palette.orange[200]
+      },
+      default: {
+        white: palette.white as string,
+        black: palette.black as string
+      },
+      background: {
+        background: palette.orange[300],
+        foreground: palette.orange[100]
+      },
+      typografy: {
+        text: palette.black as string,
+        title: palette.black as string
+      },
+      util: {
+        hover: palette.dark_gray[50],
+        divider: '#000'
+      }
+    },
+    assets: {
+      test: ''
+    }
+  },
+
+  green: {
+    colors: {
+      main: {
+        primary_01: palette.green[50]
+      },
+      default: {
+        white: palette.white as string,
+        black: palette.black as string
+      },
+      background: {
+        background: palette.green[100],
+        foreground: palette.green[200]
+      },
+      typografy: {
+        text: palette.white as string,
+        title: palette.white as string
+      },
+      util: {
+        hover: palette.gray[100],
+        divider: '#000'
+      }
+    },
+    assets: {
+      test: ''
     }
   }
 }
