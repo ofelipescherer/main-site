@@ -39,7 +39,6 @@ export const ThemeProvider = ({ children }: Children) => {
   const toggleTheme = (newTheme: string) => {
     if (typeof window !== 'undefined') {
       setTheme(newTheme)
-      console.log('new', newTheme)
       window.localStorage.setItem(`${appConfig.appName}:theme`, newTheme)
     }
   }

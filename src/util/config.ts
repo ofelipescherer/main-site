@@ -3,7 +3,8 @@ import { Font } from 'types/Theme'
 
 export const appConfig = {
   appName: 'FelipeSchererPortifolio',
-  title: 'Felipe Scherer',
+  title: 'Boilerplate',
+  metaTitleContent: 'Boilerplate for projects in Next JS',
   metaTagName: 'Created by Felipe Scherer',
   metaTagContent: 'Portifolio do Felipe Scherer',
   metaTagOgContent: 'Facebook meta tag'
