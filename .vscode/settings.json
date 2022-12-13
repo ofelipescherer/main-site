@@ -1,9 +1,9 @@
 {
   "prettier.requireConfig": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": false
+    "source.fixAll.eslint": true
   },
   "auto-close-tag.enableAutoCloseTag": true
 }
