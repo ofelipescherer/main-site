@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <S.MainContent>
-      <S.Title>Boilerplate dos projetos do Felipe Scherer</S.Title>
+      <S.Title>Boilerplate dos projetos em Next JS do Felipe Scherer</S.Title>
       <ThemeButton></ThemeButton>
       <IconButton>
         <a
