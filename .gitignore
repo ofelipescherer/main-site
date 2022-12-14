@@ -16,7 +16,7 @@
 /build
 
 # misc
-package-lock.json
+# package-lock.json
 .DS_Store
 *.pem
 
