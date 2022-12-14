@@ -2,7 +2,7 @@ import ThemeButton from 'compoents/Button'
 import IconButton from 'compoents/IconButton'
 import GithubIcon from 'icons/Github/indext'
 import { useTheme } from 'styled-components'
-import * as S from './styles'
+import * as S from 'styles/styles'
 
 export default function Home() {
   const theme = useTheme()
