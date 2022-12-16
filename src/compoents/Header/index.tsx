@@ -20,7 +20,11 @@ export const Header = () => {
       <S.Container>
         {firstHalf.map((item) => {
           return (
-            <Link key={item.value} href={'/' + item.value}>
+            <Link
+              key={item.value}
+              href={'/' + item.value}
+              onClick={() => setMenuSelected(item.value)}
+            >
               <S.MenuItem
                 className={menuSelected === item.value ? 'selected' : ''}
               >
@@ -38,7 +42,11 @@ export const Header = () => {
 
         {secondHalf.map((item) => {
           return (
-            <Link key={item.value} href={item.value}>
+            <Link
+              key={item.value}
+              href={item.value}
+              onClick={() => setMenuSelected(item.value)}
+            >
               <S.MenuItem
                 className={menuSelected === item.value ? 'selected' : ''}
               >

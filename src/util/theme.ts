@@ -63,7 +63,8 @@ export const theme: Theme = {
       },
       util: {
         hover: palette.dark_gray[50],
-        divider: '#000'
+        divider: '#000',
+        disabled: palette.gray[500]
       }
     },
     assets: {
@@ -89,7 +90,8 @@ export const theme: Theme = {
       },
       util: {
         hover: palette.gray[100],
-        divider: '#000'
+        divider: '#000',
+        disabled: palette.gray[500]
       }
     },
     assets: {
@@ -116,7 +118,8 @@ export const theme: Theme = {
       },
       util: {
         hover: palette.dark_gray[50],
-        divider: '#000'
+        divider: '#000',
+        disabled: palette.gray[500]
       }
     },
     assets: {
@@ -143,7 +146,8 @@ export const theme: Theme = {
       },
       util: {
         hover: palette.gray[100],
-        divider: '#000'
+        divider: '#000',
+        disabled: palette.gray[500]
       }
     },
     assets: {

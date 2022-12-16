@@ -40,6 +40,7 @@ export type Colors = {
   util: {
     hover: string
     divider: string
+    disabled: string
   }
 }
 

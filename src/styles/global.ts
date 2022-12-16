@@ -4,6 +4,15 @@ const GlobalStyles = createGlobalStyle`
 
 ${reset}
 
+
+*, *::after, *::before {
+  box-sizing: border-box
+}
+
+input[type=radio] {
+  display: none;
+}
+
 button {
   border: none;
   margin: 0;
