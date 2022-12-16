@@ -8,18 +8,20 @@ export default function Home() {
   const theme = useTheme()
 
   return (
-    <S.MainContent>
-      <S.Title>Boilerplate dos projetos em Next JS do Felipe Scherer</S.Title>
-      <ThemeButton></ThemeButton>
-      <IconButton>
-        <a
-          href="https://github.com/ofelipescherer"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <GithubIcon color={theme.colors.typografy.title} />
-        </a>
-      </IconButton>
-    </S.MainContent>
+    <>
+      <S.MainContent>
+        <S.Title>Boilerplate dos projetos em Next JS do Felipe Scherer</S.Title>
+        <ThemeButton />
+        <IconButton>
+          <a
+            href="https://github.com/ofelipescherer"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <GithubIcon color={theme.colors.typografy.title} />
+          </a>
+        </IconButton>
+      </S.MainContent>
+    </>
   )
 }

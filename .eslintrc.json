@@ -28,6 +28,7 @@
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
+    "react/self-closing-comp": "warn",
     "@typescript-eslint/explicit-module-boundary": "off",
     "prettier/prettier": [
       "error",
