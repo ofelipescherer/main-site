@@ -1,12 +1,13 @@
-import { MyProjectHome } from 'compoents/Home/MyProjects/MyProjectHome'
+import { AboutMeCarrousel } from 'compoents/Home/AboutMeCarrousel'
+import { ProjectsCarrousel } from 'compoents/Home/ProjectsCarrousel'
 import * as S from 'styles/styles'
 
 export default function Home() {
   return (
     <>
       <S.MainContent>
-        <MyProjectHome />
-        <div>a</div>
+        <AboutMeCarrousel />
+        <ProjectsCarrousel />
       </S.MainContent>
     </>
   )
