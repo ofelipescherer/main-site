@@ -1,12 +1,48 @@
+import Image from 'next/image'
 import styled from 'styled-components'
 
-export const Container = styled.div`
-  box-shadow: 5px 5px 10px; ;
+export const Wraper = styled.div`
+  flex: 0 0 30%;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
 `
 
-export const Card = styled.div`
-  flex: 0 0 30%;
-  height: 50px;
+export const BackgroundImage = styled(Image)`
+  width: 100%;
+  aspect-ratio: 4 /2;
+  background-color: red;
+`
 
-  background-color: gray;
+export const Container = styled.div`
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+`
+
+export const CardIcon = styled.div`
+  position: absolute;
+  border-radius: 10px;
+  padding: 0.25rem;
+  margin-left: 0.25rem;
+  top: -2rem;
+  width: 3.5rem;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+`
+
+export const CardTitle = styled.div`
+  font-size: 18px;
+  padding-top: 1rem;
+  padding-left: 0.25rem;
+  font-weight: 600;
+`
+
+export const CardDescription = styled.span`
+  font-size: 12px;
+  padding-left: 0.25rem;
+  opacity: 0.7;
 `
