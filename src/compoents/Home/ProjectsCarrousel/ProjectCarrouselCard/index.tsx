@@ -5,9 +5,8 @@ type ProjectCarrouselCard = {
   content: string
 }
 
-export const ProjectCarrouselCard = ({
-  color,
-  content
-}: ProjectCarrouselCard) => {
+const ProjectCarrouselCard = ({ color, content }: ProjectCarrouselCard) => {
   return <S.Card color={color}>{content}</S.Card>
 }
+
+export default ProjectCarrouselCard

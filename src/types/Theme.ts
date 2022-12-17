@@ -17,8 +17,6 @@ export type Font = {
 export type Theme = {
   dark: ThemeConfig
   light: ThemeConfig
-  desert: ThemeConfig
-  green: ThemeConfig
 }
 
 export type Colors = {
@@ -41,6 +39,7 @@ export type Colors = {
     hover: string
     divider: string
     disabled: string
+    auxiliar_gray: string
   }
 }
 

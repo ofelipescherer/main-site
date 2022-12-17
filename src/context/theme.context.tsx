@@ -4,7 +4,7 @@ import { Children } from 'types/Global'
 import { Theme } from 'types/Theme'
 
 import { appConfig } from 'util/config'
-import { theme as themes } from 'util/theme'
+import { theme as themes } from 'themes'
 
 type ThemeContextType = {
   theme: string

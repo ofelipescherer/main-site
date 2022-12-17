@@ -7,12 +7,14 @@ export const Wraper = styled.div`
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  color: ${({ theme }) => theme.colors.typografy.text};
+  background-color: ${({ theme }) => theme.colors.background.foreground};
 `
 
 export const BackgroundImage = styled(Image)`
   width: 100%;
   aspect-ratio: 4 /2;
-  background-color: red;
+  background-color: ${({ theme }) => theme.colors.main.primary_01};
 `
 
 export const Container = styled.div`
@@ -30,8 +32,8 @@ export const CardIcon = styled.div`
   margin-left: 0.25rem;
   top: -2rem;
   width: 3.5rem;
-  background-color: white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background-color: ${({ theme }) => theme.colors.background.foreground};
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.24);
 `
 
 export const CardTitle = styled.div`

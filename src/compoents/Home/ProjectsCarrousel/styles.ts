@@ -20,7 +20,7 @@ export const ProjectCarrousel = styled.div`
 export const CardCarrousel = styled.button`
   width: 15px;
   height: 15px;
-  background-color: gray;
+  background-color: ${({ theme }) => theme.colors.util.auxiliar_gray};
   border-radius: 50%;
   opacity: 0.5;
   cursor: pointer;
