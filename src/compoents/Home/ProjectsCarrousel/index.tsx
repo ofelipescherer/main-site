@@ -4,7 +4,11 @@ import ProjectCarrouselCard from './ProjectCarrouselCard'
 
 import * as S from './styles'
 
-export const ProjectsCarrousel = () => {
+type ProjectCarrousel = {
+  id: React.ReactNode
+}
+
+export const ProjectsCarrousel = ({ id }: ProjectCarrousel) => {
   const cards = [
     <ProjectCarrouselCard key={1} color="#155" content="1" />,
     <ProjectCarrouselCard key={2} color="#255" content="2" />,
@@ -38,7 +42,7 @@ export const ProjectsCarrousel = () => {
   }
 
   return (
-    <S.Wraper>
+    <S.Wraper id={id}>
       <S.TitleContainer>
         <TitleCarrousel>My Projects</TitleCarrousel>
         <S.ProjectCarrousel>
