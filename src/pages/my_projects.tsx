@@ -9,9 +9,11 @@ export default function MyProjects() {
     <>
       <div>MyProjects</div>
 
-      {dataCard.map((card) => (
-        <Card key={card.id} card={card} />
-      ))}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+        {dataCard.map((card) => (
+          <Card key={card.id} card={card} />
+        ))}
+      </div>
     </>
   )
 }

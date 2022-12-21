@@ -21,3 +21,12 @@ export enum CardProjectType {
   original = 'Original',
   computerScienceCollegeProjects = 'Computer Science College Projects'
 }
+
+export enum CardProjectColors {
+  draw = '#FF28CFA6 ',
+  codeWeek = '#F6D319A6',
+  codingCourseLesson = '#00C06BA6',
+  codeScript = '#3272EFA6',
+  original = '#8F47ECA6',
+  computerScienceCollegeProjects = '#EE0A0AA6'
+}

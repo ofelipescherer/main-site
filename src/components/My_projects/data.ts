@@ -5,7 +5,8 @@ export const dataCards: CardProject[] = [
     id: 0,
     type: 'original',
     title: 'Portifolio',
-    image: '',
+    image:
+      'https://user-images.githubusercontent.com/62115215/208798426-0b528230-530f-446f-9c1e-04df1b18835d.png',
     description: 'Site do portifolio do felipe scherer',
     tags: ['react', 'nextjs', 'figma']
   },
@@ -13,7 +14,8 @@ export const dataCards: CardProject[] = [
     id: 1,
     type: 'codeWeek',
     title: 'Alura | Alura Animal Quiz',
-    image: '',
+    image:
+      'https://user-images.githubusercontent.com/62115215/208798426-0b528230-530f-446f-9c1e-04df1b18835d.png',
     description: 'Projeto de um quiz animal com compartilhamento',
     tags: ['react']
   },
@@ -21,7 +23,8 @@ export const dataCards: CardProject[] = [
     id: 2,
     type: 'codeScript',
     title: 'CSS header',
-    image: '',
+    image:
+      'https://user-images.githubusercontent.com/62115215/208798426-0b528230-530f-446f-9c1e-04df1b18835d.png',
     description: 'lorem lorem lorem',
     tags: []
   },
@@ -29,7 +32,8 @@ export const dataCards: CardProject[] = [
     id: 3,
     type: 'draw',
     title: 'Draw 1',
-    image: '',
+    image:
+      'https://user-images.githubusercontent.com/62115215/208798426-0b528230-530f-446f-9c1e-04df1b18835d.png',
     description: 'lorem lorem lorem',
     tags: []
   },
@@ -61,7 +65,8 @@ export const dataCards: CardProject[] = [
     id: 7,
     type: 'codeWeek',
     title: 'string',
-    image: '',
+    image:
+      'https://user-images.githubusercontent.com/62115215/208798426-0b528230-530f-446f-9c1e-04df1b18835d.png',
     description: 'lorem lorem lorem',
     tags: []
   }
