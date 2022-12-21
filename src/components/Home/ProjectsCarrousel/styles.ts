@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 
-export const Wraper = styled.div`
+interface Attrs {
+  id?: string | undefined | null
+}
+
+export const Wraper = styled.div.attrs(({ id = '#' }: Attrs) => ({
+  id
+}))`
   display: flex;
   flex-direction: column;
   gap: 1rem;
