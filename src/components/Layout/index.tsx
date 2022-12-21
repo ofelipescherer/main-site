@@ -1,4 +1,4 @@
-import { Header } from 'compoents/Header'
+import { Header } from 'components/Header'
 import Head from 'next/head'
 import { Children } from 'types/Global'
 import { appConfig } from 'util/config'

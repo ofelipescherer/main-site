@@ -1,4 +1,4 @@
-import { Layout } from 'compoents/Layout/indext'
+import { Layout } from 'components/Layout'
 import { ThemeProvider } from 'context/theme.context'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'

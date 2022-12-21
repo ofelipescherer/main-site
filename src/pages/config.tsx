@@ -1,4 +1,4 @@
-import ThemeButton from 'compoents/Button'
+import ThemeButton from 'components/Button'
 
 export default function Config() {
   return (

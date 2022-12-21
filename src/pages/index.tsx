@@ -1,6 +1,6 @@
-import { AboutMeCarrousel } from 'compoents/Home/AboutMeCarrousel'
-import { Meet } from 'compoents/Home/Meet'
-import { ProjectsCarrousel } from 'compoents/Home/ProjectsCarrousel'
+import { AboutMeCarrousel } from 'components/Home/AboutMeCarrousel'
+import { Meet } from 'components/Home/Meet'
+import { ProjectsCarrousel } from 'components/Home/ProjectsCarrousel'
 import * as S from 'styles/styles'
 
 export default function Home() {
