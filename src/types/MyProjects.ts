@@ -7,6 +7,7 @@ export type CardProject = {
     | 'codeScript'
     | 'original'
     | 'computerScienceCollegeProjects'
+    | 'recipe'
   title: string
   image: string
   description: string
@@ -28,5 +29,6 @@ export enum CardProjectColors {
   codingCourseLesson = '#00C06BA6',
   codeScript = '#3272EFA6',
   original = '#8F47ECA6',
-  computerScienceCollegeProjects = '#EE0A0AA6'
+  computerScienceCollegeProjects = '#EE0A0AA6',
+  recipe = '#ff455555'
 }
