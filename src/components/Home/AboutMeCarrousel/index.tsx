@@ -1,6 +1,6 @@
 import CollegeIcon from 'icons/College/indext'
 import { useTheme } from 'styled-components'
-import { TitleCarrousel } from '../TitleCarrousel'
+import TitleCarrousel from '../TitleCarrousel'
 import { AboutMeCarrouselCard } from './AboutMeCarrouselCard'
 import * as S from './styles'
 

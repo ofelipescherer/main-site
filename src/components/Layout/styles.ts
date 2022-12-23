@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
   box-sizing: border-box !important;
   /* position: relative; */
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.background.background};
 `
 
 export const Contain = styled.div`

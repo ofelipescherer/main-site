@@ -1,5 +1,5 @@
 import React from 'react'
-import { TitleCarrousel } from '../TitleCarrousel'
+import TitleCarrousel from '../TitleCarrousel'
 import ProjectCarrouselCard from './ProjectCarrouselCard'
 
 import * as S from './styles'

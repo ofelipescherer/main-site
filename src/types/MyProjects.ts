@@ -20,7 +20,8 @@ export enum CardProjectType {
   codingCourseLesson = 'Coding Course Lesson',
   codeScript = 'Coding Scrips',
   original = 'Original',
-  computerScienceCollegeProjects = 'Computer Science College Projects'
+  computerScienceCollegeProjects = 'Computer Science College Projects',
+  recipe = 'Receita'
 }
 
 export enum CardProjectColors {
