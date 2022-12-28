@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <S.MainContent>
         <Meet />
-        <AboutMeCarrousel />
+        <AboutMeCarrousel id={'aboutMe'} />
         <ProjectsCarrousel id={'myProjects'} />
       </S.MainContent>
     </>

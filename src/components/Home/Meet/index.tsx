@@ -1,6 +1,10 @@
+import ArrowDown from 'icons/ArrowDown'
+import { useTheme } from 'styled-components'
 import * as S from './styles'
 
 export const Meet = () => {
+  const theme = useTheme()
+
   return (
     <S.WraperNextPage>
       <S.Wrapper>
@@ -23,8 +27,8 @@ export const Meet = () => {
         <S.ImageMeet />
       </S.Wrapper>
 
-      <S.ButtonNextFragment href="#myProjects" scroll={false}>
-        Next
+      <S.ButtonNextFragment href="#aboutMe" scroll={false}>
+        <ArrowDown color={theme.colors.typografy.title} />
       </S.ButtonNextFragment>
     </S.WraperNextPage>
   )

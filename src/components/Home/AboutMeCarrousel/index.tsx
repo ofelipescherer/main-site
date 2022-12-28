@@ -1,10 +1,14 @@
+import ArrowDown from 'icons/ArrowDown'
 import CollegeIcon from 'icons/College/indext'
 import { useTheme } from 'styled-components'
 import TitleCarrousel from '../TitleCarrousel'
 import { AboutMeCarrouselCard } from './AboutMeCarrouselCard'
 import * as S from './styles'
 
-export const AboutMeCarrousel = () => {
+type AboutMe = {
+  id: React.ReactNode
+}
+export const AboutMeCarrousel = ({ id }: AboutMe) => {
   const theme = useTheme()
 
   const cards = [
@@ -35,7 +39,7 @@ export const AboutMeCarrousel = () => {
   ]
 
   return (
-    <S.Wraper>
+    <S.Wraper id={id}>
       <TitleCarrousel>About me</TitleCarrousel>
 
       <S.Container>
@@ -43,6 +47,10 @@ export const AboutMeCarrousel = () => {
           <AboutMeCarrouselCard key={item.id} item={item} />
         ))}
       </S.Container>
+
+      <S.ButtonNextFragment href="#myProjects" scroll={false}>
+        <ArrowDown color={theme.colors.typografy.title} />
+      </S.ButtonNextFragment>
     </S.Wraper>
   )
 }

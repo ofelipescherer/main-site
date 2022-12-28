@@ -85,4 +85,13 @@ export const ImageMeet = styled.div`
   background-color: ${({ theme }) => theme.colors.main.primary_01};
 `
 
-export const ButtonNextFragment = styled(Link)``
+export const ButtonNextFragment = styled(Link)`
+  align-self: center;
+  background-color: ${({ theme }) => theme.colors.background.foreground};
+  padding: 1rem;
+  border-radius: 50%;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`
