@@ -19,6 +19,10 @@ export type Theme = {
   light: ThemeConfig
 }
 
+export type ThemeString = 'dark' | 'light'
+
+export const ThemeStringArray = ['dark', 'light']
+
 export type Colors = {
   main: {
     primary_01: string

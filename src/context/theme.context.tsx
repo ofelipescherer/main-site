@@ -1,7 +1,7 @@
 import { useEffect, createContext, useState } from 'react'
 import { ThemeProvider as ThemeProviderStyle } from 'styled-components'
 import { Children } from 'types/Global'
-import { Theme } from 'types/Theme'
+import { Theme, ThemeString, ThemeStringArray } from 'types/Theme'
 
 import { appConfig } from 'util/config'
 import { theme as themes } from 'themes/index'
@@ -23,8 +23,9 @@ export const ThemeProvider = ({ children }: Children) => {
     if (typeof window !== 'undefined') {
       const storagedTheme = window.localStorage.getItem(
         `${appConfig.appName}:theme`
-      )
-      if (storagedTheme) {
+      ) as ThemeString
+
+      if (storagedTheme && ThemeStringArray.includes(storagedTheme)) {
         setTheme(storagedTheme)
       } else {
         window.localStorage.setItem(`${appConfig.appName}:theme`, 'light')
