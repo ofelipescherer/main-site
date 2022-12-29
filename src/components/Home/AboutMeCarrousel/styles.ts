@@ -29,4 +29,6 @@ export const Wraper = styled.div.attrs(({ id = '#' }: Attrs) => ({
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  height: 100vh;
+  padding-top: 20%;
 `

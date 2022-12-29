@@ -9,6 +9,8 @@ export const Wraper = styled.div`
   flex-direction: column;
   gap: 1rem;
   align-items: center;
+  background-color: ${({ theme }) => theme.colors.background.background};
+  z-index: 10;
 `
 
 export const Container = styled.div`

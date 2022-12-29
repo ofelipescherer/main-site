@@ -11,6 +11,8 @@ export const Wraper = styled.div.attrs(({ id = '#' }: Attrs) => ({
   flex-direction: column;
   gap: 1rem;
   margin-top: 5rem;
+  height: 100vh;
+  padding-top: 10%;
 `
 
 export const TitleContainer = styled.div`
@@ -52,11 +54,12 @@ export const Container = styled.div`
   position: relative;
 `
 
-export const Button = styled.button`
+export const Button = styled.div`
   cursor: pointer;
   position: absolute;
   transform: scale(0.8);
 
+  z-index: 5;
   opacity: 0.5;
   transition: 0.4s ease-in-out;
 

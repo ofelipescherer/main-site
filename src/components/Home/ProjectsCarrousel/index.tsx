@@ -1,6 +1,7 @@
+import Card from 'components/My_projects/Card'
+import { dataCards } from 'components/My_projects/data'
 import React from 'react'
 import TitleCarrousel from '../TitleCarrousel'
-import ProjectCarrouselCard from './ProjectCarrouselCard'
 
 import * as S from './styles'
 
@@ -9,36 +10,38 @@ type ProjectCarrousel = {
 }
 
 export const ProjectsCarrousel = ({ id }: ProjectCarrousel) => {
-  const cards = [
-    <ProjectCarrouselCard key={1} color="#155" content="1" />,
-    <ProjectCarrouselCard key={2} color="#255" content="2" />,
-    <ProjectCarrouselCard key={3} color="#355" content="3" />,
-    <ProjectCarrouselCard key={4} color="#455" content="4" />,
-    <ProjectCarrouselCard key={5} color="#555" content="5" />,
-    <ProjectCarrouselCard key={6} color="#655" content="6" />,
-    <ProjectCarrouselCard key={7} color="#755" content="7" />,
-    <ProjectCarrouselCard key={8} color="#855" content="8" />
-  ]
   const [cardSelected, setCardSelected] = React.useState(0)
+  const [previousCard, setPreviousCard] = React.useState(0)
+  const [nextCard, setNextCard] = React.useState(0)
 
-  const setPreviousCard = () => {
+  const getCards = (): React.ReactNode[] => {
+    const array: React.ReactNode[] = []
+    dataCards.map((card) => array.push(<Card card={card} />))
+    return array
+  }
+
+  const cards = getCards()
+
+  React.useEffect(() => {
+    if (!cards || cards.length === 0) return
+    console.log(cards, cardSelected)
+
+    const next = cardSelected === cards.length - 1 ? 0 : cardSelected + 1
+    const previous = cardSelected === 0 ? cards.length - 1 : cardSelected - 1
+    setNextCard(next)
+    setPreviousCard(previous)
+
+    console.log(next, previous)
+  }, [cardSelected, cards])
+
+  const setCardSelectedPrevious = () => {
     if (cardSelected === 0) setCardSelected(cards.length - 1)
     else setCardSelected(cardSelected - 1)
   }
 
-  const setNextCard = () => {
+  const setCardSelectedNext = () => {
     if (cardSelected === cards.length - 1) setCardSelected(0)
     else setCardSelected(cardSelected + 1)
-  }
-
-  const getPreviousCard = () => {
-    if (cardSelected === 0) return cards[cards.length - 1]
-    else return cards[cardSelected - 1]
-  }
-
-  const getNextCard = () => {
-    if (cardSelected === cards.length - 1) return cards[0]
-    else return cards[cardSelected + 1]
   }
 
   return (
@@ -57,13 +60,15 @@ export const ProjectsCarrousel = ({ id }: ProjectCarrousel) => {
       </S.TitleContainer>
 
       <S.Container>
-        <S.ButtonLeft onClick={setPreviousCard}>
-          {getPreviousCard()}
+        <S.ButtonLeft onClick={setCardSelectedPrevious}>
+          {cards[previousCard]}
         </S.ButtonLeft>
 
         {cards[cardSelected]}
 
-        <S.ButtonRight onClick={setNextCard}>{getNextCard()}</S.ButtonRight>
+        <S.ButtonRight onClick={setCardSelectedNext}>
+          {cards[nextCard]}
+        </S.ButtonRight>
       </S.Container>
     </S.Wraper>
   )

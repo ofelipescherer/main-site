@@ -8,6 +8,7 @@ export const WraperNextPage = styled.div`
   gap: 1rem;
   height: calc(100vh - 60px - 1rem);
   padding-top: 20%;
+  height: 100vh;
 `
 
 export const Wrapper = styled.div`
