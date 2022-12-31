@@ -11,7 +11,8 @@ export const dataCards: CardProject[] = [
     description: 'Site do portifolio do felipe scherer',
     date: 1659277618000,
     github: '',
-    tags: [react, figma, javascript, next, angular, javascript, next, angular]
+    tags: [react, figma, javascript, next, angular, javascript, next, angular],
+    slug: 'portifolio'
   },
   {
     id: 1,
@@ -22,7 +23,8 @@ export const dataCards: CardProject[] = [
     description: 'Projeto de um quiz animal com compartilhamento',
     date: 1654007218000,
     github: '',
-    tags: [figma]
+    tags: [figma],
+    slug: 'alura-animal-quiz'
   },
   {
     id: 2,
@@ -33,7 +35,8 @@ export const dataCards: CardProject[] = [
     description: 'lorem lorem lorem',
     date: 1643639218000,
     github: '',
-    tags: [react, figma, javascript, next, angular]
+    tags: [react, figma, javascript, next, angular],
+    slug: 'css-header'
   },
   {
     id: 3,
@@ -44,7 +47,8 @@ export const dataCards: CardProject[] = [
     description: 'lorem lorem lorem',
     date: 1654007218000,
     github: '',
-    tags: []
+    tags: [],
+    slug: 'draw-1'
   },
   {
     id: 4,
@@ -54,7 +58,8 @@ export const dataCards: CardProject[] = [
     description: 'lorem lorem lorem',
     date: 1580480818000,
     github: '',
-    tags: []
+    tags: [],
+    slug: 'eg-1'
   },
   {
     id: 5,
@@ -64,7 +69,8 @@ export const dataCards: CardProject[] = [
     description: 'lorem lorem lorem',
     date: 1654007218000,
     github: '',
-    tags: []
+    tags: [],
+    slug: 'aps-1'
   },
   {
     id: 6,
@@ -74,17 +80,19 @@ export const dataCards: CardProject[] = [
     description: 'lorem lorem lorem',
     date: 1654007218000,
     github: '',
-    tags: []
+    tags: [],
+    slug: 'string'
   },
   {
     id: 7,
     type: 'recipe',
-    title: 'string',
+    title: 'string 2',
     image:
       'https://user-images.githubusercontent.com/62115215/208798426-0b528230-530f-446f-9c1e-04df1b18835d.png',
     description: 'lorem lorem lorem',
     date: 1654007218000,
     github: '',
-    tags: []
+    tags: [],
+    slug: 'string-2'
   }
 ]

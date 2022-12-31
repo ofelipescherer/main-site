@@ -14,6 +14,7 @@ export type CardProject = {
   tags: Tag[]
   date: number
   github: string
+  slug: string
 }
 
 export type Tag = {
