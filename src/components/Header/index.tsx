@@ -14,9 +14,11 @@ export const Header = () => {
   const firstHalf = menuItems.splice(0, middleIndex)
   const secondHalf = menuItems.splice(-middleIndex)
 
-  const [menuSelected, setMenuSelected] = React.useState<string>('')
-
   const router = useRouter()
+  const [menuSelected, setMenuSelected] = React.useState<string>(
+    router.route.slice(1)
+  )
+
   React.useEffect(() => {
     const handleRouteChange = (url: string) => {
       setMenuSelected(url.slice(1))

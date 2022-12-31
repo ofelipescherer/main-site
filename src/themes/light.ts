@@ -15,7 +15,8 @@ export const lightTheme = {
     },
     typografy: {
       text: palette.black as string,
-      title: palette.black as string
+      title: palette.black as string,
+      description: `${palette.black}B3`
     },
     util: {
       hover: palette.gray[100],

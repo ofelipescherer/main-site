@@ -15,7 +15,8 @@ export const darkTheme = {
     },
     typografy: {
       text: palette.white as string,
-      title: palette.white as string
+      title: palette.white as string,
+      description: `${palette.white}B3`
     },
     util: {
       hover: palette.dark_gray[50],

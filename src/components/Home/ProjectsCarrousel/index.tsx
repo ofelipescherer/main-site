@@ -24,14 +24,11 @@ export const ProjectsCarrousel = ({ id }: ProjectCarrousel) => {
 
   React.useEffect(() => {
     if (!cards || cards.length === 0) return
-    console.log(cards, cardSelected)
 
     const next = cardSelected === cards.length - 1 ? 0 : cardSelected + 1
     const previous = cardSelected === 0 ? cards.length - 1 : cardSelected - 1
     setNextCard(next)
     setPreviousCard(previous)
-
-    console.log(next, previous)
   }, [cardSelected, cards])
 
   const setCardSelectedPrevious = () => {

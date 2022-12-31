@@ -1,4 +1,5 @@
 import { CardProject } from 'types/MyProjects'
+import { angular, figma, javascript, next, react } from './dataTag'
 
 export const dataCards: CardProject[] = [
   {
@@ -8,7 +9,9 @@ export const dataCards: CardProject[] = [
     image:
       'https://user-images.githubusercontent.com/62115215/208798426-0b528230-530f-446f-9c1e-04df1b18835d.png',
     description: 'Site do portifolio do felipe scherer',
-    tags: ['react', 'nextjs', 'figma']
+    date: 1659277618000,
+    github: '',
+    tags: [react, figma, javascript, next, angular, javascript, next, angular]
   },
   {
     id: 1,
@@ -17,7 +20,9 @@ export const dataCards: CardProject[] = [
     image:
       'https://user-images.githubusercontent.com/62115215/208798426-0b528230-530f-446f-9c1e-04df1b18835d.png',
     description: 'Projeto de um quiz animal com compartilhamento',
-    tags: ['react']
+    date: 1654007218000,
+    github: '',
+    tags: [figma]
   },
   {
     id: 2,
@@ -26,7 +31,9 @@ export const dataCards: CardProject[] = [
     image:
       'https://user-images.githubusercontent.com/62115215/208798426-0b528230-530f-446f-9c1e-04df1b18835d.png',
     description: 'lorem lorem lorem',
-    tags: []
+    date: 1643639218000,
+    github: '',
+    tags: [react, figma, javascript, next, angular]
   },
   {
     id: 3,
@@ -35,6 +42,8 @@ export const dataCards: CardProject[] = [
     image:
       'https://user-images.githubusercontent.com/62115215/208798426-0b528230-530f-446f-9c1e-04df1b18835d.png',
     description: 'lorem lorem lorem',
+    date: 1654007218000,
+    github: '',
     tags: []
   },
   {
@@ -43,6 +52,8 @@ export const dataCards: CardProject[] = [
     title: 'Eg 1',
     image: '',
     description: 'lorem lorem lorem',
+    date: 1580480818000,
+    github: '',
     tags: []
   },
   {
@@ -51,6 +62,8 @@ export const dataCards: CardProject[] = [
     title: 'APS 1',
     image: '',
     description: 'lorem lorem lorem',
+    date: 1654007218000,
+    github: '',
     tags: []
   },
   {
@@ -59,6 +72,8 @@ export const dataCards: CardProject[] = [
     title: 'string',
     image: '',
     description: 'lorem lorem lorem',
+    date: 1654007218000,
+    github: '',
     tags: []
   },
   {
@@ -68,6 +83,8 @@ export const dataCards: CardProject[] = [
     image:
       'https://user-images.githubusercontent.com/62115215/208798426-0b528230-530f-446f-9c1e-04df1b18835d.png',
     description: 'lorem lorem lorem',
+    date: 1654007218000,
+    github: '',
     tags: []
   }
 ]

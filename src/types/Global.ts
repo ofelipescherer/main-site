@@ -3,5 +3,5 @@ export type Children = {
 }
 
 export type Icon = {
-  color: string
+  color?: string
 }

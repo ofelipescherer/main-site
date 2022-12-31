@@ -11,7 +11,16 @@ export type CardProject = {
   title: string
   image: string
   description: string
-  tags: string[]
+  tags: Tag[]
+  date: number
+  github: string
+}
+
+export type Tag = {
+  id: number
+  title: string
+  color: string
+  backgroundColor: string
 }
 
 export enum CardProjectType {
@@ -33,3 +42,18 @@ export enum CardProjectColors {
   computerScienceCollegeProjects = '#EE0A0AA6',
   recipe = '#ff455555'
 }
+
+export const Month = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+]

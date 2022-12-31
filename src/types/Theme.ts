@@ -38,6 +38,7 @@ export type Colors = {
   typografy: {
     text: string
     title: string
+    description: string
   }
   util: {
     hover: string
