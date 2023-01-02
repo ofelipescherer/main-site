@@ -11,16 +11,50 @@ tags: [react, figma, javascript, next, angular, javascript, next, angular]
 slug: portifolio
 ---
 
+# TITULO 1 BEM GRANDE PARA VER COMO VAI FICAR SE TIVER POUCO ESPACAÇO
+
+# TITLE H1
+
+## TITLE H2
+
+## TITLE H3
+
+## TITLE H4
+
+## TITLE H5
+
+**bold**
+
+_italic_
+
+1. Ordered item 1
+1. Ordered item 2
+1. Ordered item 3
+1. Ordered item 4
+1. Ordered item 5
+
+- Non Ordered item 1
+  - Non Ordered item 2
+- Non Ordered item 3
+- Non Ordered item 4
+- Non Ordered item 5
+
+> Vue.js and React.js are two frontend JavaScript frameworks popular in the developer world, with React taking the top spot on the podium for three consecutive years now. Both tools offer developers a productive approach to building various Web applications, but each has its own best use cases and responds to different business needs. In this article, we’ll explore what those use cases can be, along with perks that make Vue.js and React unique.
+>
+> A blockquote would look great below the second list item.
+
+```js
+//CODE BLOCKS
+const a = 'espero que de certo'
+```
+
 ![Vue vs React](https://www.monterail.com/hubfs/vuevsreact.jpg)
 
 ---
 
-# AAAAAAAAAAAAAA
+[link](https://duckduckgo.com 'The best search engine for privacy').
 
-Vue.js and React.js are two frontend JavaScript frameworks popular in the developer world, with React taking the top spot on the podium for three consecutive years now. Both tools offer developers a productive approach to building various Web applications, but each has its own best use cases and responds to different business needs. In this article, we’ll explore what those use cases can be, along with perks that make Vue.js and React unique.
+#### URLs and Email Addresses
 
-# The Cream of the Crop
-
-There are many reasons for Vue’s and React’s prominence on the developer landscape, but before we dive deeper into their distinctive features, let’s briefly go over what the two share that makes them so much in demand.
-
-**Virtual DOM** —instead of re-rendering the whole page as is the case with regular DOM, React and Vue update only those objects that have changed, saving the time and resources that heavy DOM manipulations otherwise consume.
+<https://www.markdownguide.org>
+<fake@example.com>

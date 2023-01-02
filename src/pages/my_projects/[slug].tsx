@@ -4,21 +4,21 @@ import ReactMarkdown from 'react-markdown'
 import * as fs from 'fs'
 import * as path from 'path'
 import matter from 'gray-matter'
-import * as S from 'styles/my_projects'
-import { Children } from 'types/Global'
 import { CardProject } from 'types/MyProjects'
+import {
+  MdBlockQuote,
+  MdH1,
+  MdH2,
+  MdH3,
+  MdH4,
+  MdH5,
+  MdBold,
+  MdItalic
+} from 'components/Markdown'
 
 type ProjectPage = {
   fontmatterdata: CardProject
   content: string
-}
-
-const Test = ({ children }: Children) => {
-  return (
-    <div>
-      <S.Markdownh1>{children}</S.Markdownh1>
-    </div>
-  )
 }
 
 export default function ProjectPage({ fontmatterdata, content }: ProjectPage) {
@@ -35,7 +35,16 @@ export default function ProjectPage({ fontmatterdata, content }: ProjectPage) {
           // eslint-disable-next-line react/no-children-prop
           children={content}
           components={{
-            h1: ({ children }) => <Test>{children}</Test>
+            h1: ({ children }) => <MdH1>{children}</MdH1>,
+            h2: ({ children }) => <MdH2>{children}</MdH2>,
+            h3: ({ children }) => <MdH3>{children}</MdH3>,
+            h4: ({ children }) => <MdH4>{children}</MdH4>,
+            h5: ({ children }) => <MdH5>{children}</MdH5>,
+            strong: ({ children }) => <MdBold>{children}</MdBold>,
+            em: ({ children }) => <MdItalic>{children}</MdItalic>,
+            blockquote: ({ children }) => (
+              <MdBlockQuote>{children}</MdBlockQuote>
+            )
           }}
         />
       </div>
