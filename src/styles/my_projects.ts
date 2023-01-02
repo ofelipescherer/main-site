@@ -64,3 +64,7 @@ export const FilterByDate = styled.div`
   width: 200px;
   height: 50px;
 `
+
+export const Markdownh1 = styled.h1`
+  font-size: 40px;
+`

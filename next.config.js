@@ -7,6 +7,15 @@ const nextConfig = {
   },
   images: {
     domains: ['user-images.githubusercontent.com', 'images.unsplash.com']
+  },
+
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.md$/,
+      use: 'raw-loader'
+    })
+
+    return config
   }
 }
 
