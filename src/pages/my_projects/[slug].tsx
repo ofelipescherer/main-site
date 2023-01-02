@@ -43,20 +43,6 @@ export default function ProjectPage({ fontmatterdata, content }: ProjectPage) {
   )
 }
 
-// index.tsx
-// export default function ProjectPage({ posts }: any) {
-//   console.log(posts)
-//   return (
-//     <div>
-//       <div>
-//         {posts?.map((post: any, index: any) => (
-//           <h3 key={index}>{post.fontmatterdata.title}</h3>
-//         ))}
-//       </div>
-//     </div>
-//   )
-// }
-
 export async function getStaticPaths() {
   const files = fs.readdirSync(path.join('src/projects'))
 
@@ -88,26 +74,3 @@ export async function getStaticProps({
     props: { fontmatterdata, slug, content }
   }
 }
-
-// No index
-// export async function getStaticProps({ params }: any) {
-//   const files = fs.readdirSync(path.join('src/projects'))
-
-//   const posts = files.map((filename) => {
-//     const slug = filename.replace('.md', '')
-
-//     const markdownWithMeta = fs.readFileSync(
-//       path.join('src/projects', filename),
-//       'utf-8'
-//     )
-
-//     const { data: fontmatterdata } = matter(markdownWithMeta)
-
-//     return { slug, fontmatterdata }
-//   })
-
-//   console.log(posts)
-//   return {
-//     props: { posts }
-//   }
-// }

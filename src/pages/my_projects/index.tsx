@@ -1,9 +1,19 @@
-import { dataCards } from 'components/My_projects/data'
-import ProjectCard from 'components/My_projects/ProjectCard'
 import * as S from 'styles/my_projects'
+import * as fs from 'fs'
+import * as path from 'path'
+import matter from 'gray-matter'
+import ProjectCard from 'components/My_projects/ProjectCard'
+import { CardProject } from 'types/MyProjects'
 
-export default function MyProjects() {
-  const dataCard = dataCards
+type MyProjectsProps = {
+  posts: {
+    slug: string
+    fontmatterdata: CardProject
+  }[]
+}
+
+export default function MyProjects({ posts }: MyProjectsProps) {
+  // const dataCard = dataCards
 
   return (
     <>
@@ -34,11 +44,38 @@ export default function MyProjects() {
           <S.FilterByDate>Date Filter</S.FilterByDate>
         </S.FiltersContainer>
       </S.TitleContainer>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-        {dataCard.map((card) => (
-          <ProjectCard key={card.id} card={card} />
-        ))}
+
+      <div>
+        <div>
+          {posts?.map((post) => (
+            <ProjectCard
+              key={post.fontmatterdata.id}
+              card={post.fontmatterdata}
+            />
+          ))}
+        </div>
       </div>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const files = fs.readdirSync(path.join('src/projects'))
+
+  const posts = files.map((filename) => {
+    const slug = filename.replace('.md', '')
+
+    const markdownWithMeta = fs.readFileSync(
+      path.join('src/projects', filename),
+      'utf-8'
+    )
+
+    const { data: fontmatterdata } = matter(markdownWithMeta)
+
+    return { slug, fontmatterdata }
+  })
+
+  return {
+    props: { posts }
+  }
 }

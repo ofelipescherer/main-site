@@ -1,14 +1,10 @@
 ---
-title: Portifolio
+slug: vue-vs-react
+title: adsasdasd
+description: 'Vue vs React in 2021: Which Framework to Choose and When'
 img: https://www.monterail.com/hubfs/vuevsreact.jpg
-id: 0
-type: original
-image: https://user-images.githubusercontent.com/62115215/208798426-0b528230-530f-446f-9c1e-04df1b18835d.png
-description: Site do portifolio do felipe scherer
-date: 1659277618000
-github:
-tags: [react, figma, javascript, next, angular, javascript, next, angular]
-slug: portifolio
+date: 06 August 2020
+tags: [react, 'dasda']
 ---
 
 ![Vue vs React](https://www.monterail.com/hubfs/vuevsreact.jpg)
