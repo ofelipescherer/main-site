@@ -20,9 +20,17 @@ import {
 type ProjectPage = {
   fontmatterdata: CardProject
   content: string
+  slug: string
 }
 
-export default function ProjectPage({ fontmatterdata, content }: ProjectPage) {
+export default function ProjectPage({
+  fontmatterdata,
+  content,
+  slug
+}: ProjectPage) {
+  if (!fontmatterdata || !content)
+    return <div>Projeto {slug} não foi encontrado</div>
+
   return (
     <div>
       <div>
@@ -64,10 +72,10 @@ export async function getStaticPaths() {
       slug: filename.replace('.md', '')
     }
   }))
-
+  console.log(paths)
   return {
     paths,
-    fallback: false
+    fallback: true
   }
 }
 
@@ -76,14 +84,24 @@ export async function getStaticProps({
 }: {
   params: { slug: string }
 }) {
-  const markdownWithMeta = fs.readFileSync(
-    path.join('src/projects', slug + '.md'),
-    'utf-8'
-  )
+  try {
+    const markdownWithMeta = fs.readFileSync(
+      path.join('src/projects', slug + '.md'),
+      'utf-8'
+    )
 
-  const { data: fontmatterdata, content } = matter(markdownWithMeta)
+    const { data: fontmatterdata, content } = matter(markdownWithMeta)
 
-  return {
-    props: { fontmatterdata, slug, content }
+    return {
+      props: { fontmatterdata, slug, content }
+    }
+  } catch {
+    return {
+      props: {
+        fontmatterdata: null,
+        slug,
+        content: null
+      }
+    }
   }
 }

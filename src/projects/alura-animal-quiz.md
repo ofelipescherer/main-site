@@ -1,10 +1,13 @@
 ---
-slug: vue-vs-react
-title: adsasdasd
-description: 'Vue vs React in 2021: Which Framework to Choose and When'
-img: https://www.monterail.com/hubfs/vuevsreact.jpg
-date: 06 August 2020
-tags: [react, 'dasda']
+id: 1
+type: codeWeek
+title: Alura | Alura Animal Quiz
+image: https://user-images.githubusercontent.com/62115215/208798426-0b528230-530f-446f-9c1e-04df1b18835d.png
+description: Projeto de um quiz animal com compartilhamento
+date: 1654007218000
+github:
+tags: [figma]
+slug: alura-animal-quiz
 ---
 
 ![Vue vs React](https://www.monterail.com/hubfs/vuevsreact.jpg)

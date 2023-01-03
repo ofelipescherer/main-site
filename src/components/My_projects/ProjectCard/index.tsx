@@ -10,6 +10,7 @@ import {
   Month
 } from 'types/MyProjects'
 import * as S from './styles'
+import Link from 'next/link'
 
 type CardProjectComponent = {
   card: CardProject
@@ -83,11 +84,13 @@ export default function ProjectCard({ card }: CardProjectComponent) {
 
         <S.EndContainer>
           <GithubIcon color={theme.colors.typografy.text} />
-          <S.MoreButton
-            style={{ backgroundColor: CardProjectColors[card.type] }}
-          >
-            Saiba Mais
-          </S.MoreButton>
+          <Link href={`my_projects/${card.slug}`}>
+            <S.MoreButton
+              style={{ backgroundColor: CardProjectColors[card.type] }}
+            >
+              Saiba Mais
+            </S.MoreButton>
+          </Link>
         </S.EndContainer>
       </S.Container>
     </S.Wraper>
