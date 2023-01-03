@@ -6,6 +6,10 @@ import SyntaxHighlighter from 'react-syntax-highlighter'
 // import { docco } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 
 import agate from 'react-syntax-highlighter/dist/cjs/styles/hljs/agate'
+import React from 'react'
+
+import { toast } from 'react-toastify'
+import { useTheme } from 'styled-components'
 
 type MdCodeBlockProps = {
   language?: string
@@ -56,12 +60,27 @@ export function MdCodeBlock({
   language
 }: Children & MdCodeBlockProps) {
   const codeLanguage = language?.split('-')[1]
+  const theme = useTheme()
+  const notify = () =>
+    toast('Código copiado', {
+      position: 'top-right',
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: 'dark',
+      style: { backgroundColor: theme.colors.main.primary_01 }
+    })
+
   return (
     <S.MdCodeBlockContainer>
       <S.MdCodeBlock>
         <CopyToClipboard text={children?.toString() ?? ''}>
-          <S.MdCodeBlockButton>Copy Code</S.MdCodeBlockButton>
+          <S.MdCodeBlockButton onClick={notify}>Copy Code</S.MdCodeBlockButton>
         </CopyToClipboard>
+
         <SyntaxHighlighter language={codeLanguage} style={agate}>
           {children?.toString() ?? ''}
         </SyntaxHighlighter>
