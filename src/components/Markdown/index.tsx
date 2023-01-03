@@ -1,6 +1,16 @@
 import { Children } from 'types/Global'
 import * as S from './styles'
 
+import CopyToClipboard from 'react-copy-to-clipboard'
+import SyntaxHighlighter from 'react-syntax-highlighter'
+// import { docco } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
+
+import agate from 'react-syntax-highlighter/dist/cjs/styles/hljs/agate'
+
+type MdCodeBlockProps = {
+  language?: string
+}
+
 export function MdH1({ children }: Children) {
   return <S.MdH1>{children}</S.MdH1>
 }
@@ -41,20 +51,31 @@ export function MdBlockQuote({ children }: Children) {
   return <S.MdBlockQuote>{children}</S.MdBlockQuote>
 }
 
-export function MdCodeBlock({ children }: Children) {
-  return <S.MdCodeBlock>{children}</S.MdCodeBlock>
+export function MdCodeBlock({
+  children,
+  language
+}: Children & MdCodeBlockProps) {
+  const codeLanguage = language?.split('-')[1]
+  return (
+    <S.MdCodeBlockContainer>
+      <S.MdCodeBlock>
+        <CopyToClipboard text={children?.toString() ?? ''}>
+          <S.MdCodeBlockButton>Copy Code</S.MdCodeBlockButton>
+        </CopyToClipboard>
+        <SyntaxHighlighter language={codeLanguage} style={agate}>
+          {children?.toString() ?? ''}
+        </SyntaxHighlighter>
+      </S.MdCodeBlock>
+    </S.MdCodeBlockContainer>
+  )
 }
 
 export function MdImage({ children }: Children) {
   return <S.MdImage>{children}</S.MdImage>
 }
 
-export function MdLink({ children }: Children) {
-  return <S.MdLink>{children}</S.MdLink>
-}
-
-export function MdHorizontalLine({ children }: Children) {
-  return <S.MdHorizontalLine>{children}</S.MdHorizontalLine>
+export function MdHr({ children }: Children) {
+  return <S.MdHr>{children}</S.MdHr>
 }
 
 export function MdA({ children }: Children) {

@@ -34,9 +34,25 @@ export const MdBlockQuote = styled.blockquote`
   background-color: ${({ theme }) => theme.colors.util.auxiliar_gray};
 `
 
+export const MdCodeBlockContainer = styled.div`
+  position: relative;
+`
+
 export const MdCodeBlock = styled.code``
+
+export const MdCodeBlockButton = styled.button`
+  position: absolute;
+  color: red;
+  cursor: pointer;
+  z-index: 10;
+  right: 0;
+
+  &:hover {
+    color: green;
+  }
+`
+
 export const MdImage = styled.img``
-export const MdLink = styled.a``
-export const MdHorizontalLine = styled.hr``
+export const MdHr = styled.hr``
 
 export const MdA = styled.a``

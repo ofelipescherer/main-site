@@ -43,7 +43,7 @@ _italic_
 >
 > A blockquote would look great below the second list item.
 
-```js
+```javascript
 //CODE BLOCKS
 const a = 'espero que de certo'
 ```

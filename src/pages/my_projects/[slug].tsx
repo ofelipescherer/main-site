@@ -13,7 +13,8 @@ import {
   MdH4,
   MdH5,
   MdBold,
-  MdItalic
+  MdItalic,
+  MdCodeBlock
 } from 'components/Markdown'
 
 type ProjectPage = {
@@ -44,6 +45,9 @@ export default function ProjectPage({ fontmatterdata, content }: ProjectPage) {
             em: ({ children }) => <MdItalic>{children}</MdItalic>,
             blockquote: ({ children }) => (
               <MdBlockQuote>{children}</MdBlockQuote>
+            ),
+            code: ({ children, className }) => (
+              <MdCodeBlock language={className}>{children}</MdCodeBlock>
             )
           }}
         />
