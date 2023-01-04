@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const Wraper = styled.div`
   width: 378px;
-  height: 504px;
+  height: 423px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -24,12 +24,13 @@ export const CardType = styled.span`
   font-size: 16px;
   font-family: 'Share Tech';
   position: absolute;
+  z-index: 10;
 `
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
   width: 100%;
   height: 100%;
   padding: 0 1rem;
@@ -39,13 +40,24 @@ export const HeaderContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  align-items: center;
+`
+
+export const ImageContainer = styled.div`
+  display: flex;
+  width: 100%;
+  position: relative;
 `
 
 export const CardImage = styled(Image)`
   width: 100%;
   height: 180px;
   aspect-ratio: 16 / 9;
+`
+
+export const TagToggleButton = styled.div`
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 `
 
 export const TitleContainer = styled.div`
@@ -68,7 +80,7 @@ export const TagTitleContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  color: ${({ theme }) => theme.colors.typografy.description};
+  color: ${({ theme }) => theme.colors.default.white};
   cursor: pointer;
   user-select: none;
   font-size: 80%;
@@ -83,19 +95,10 @@ export const Description = styled.div`
   flex: 1;
 `
 
-export const TagContainer = styled.div`
+export const TagWrapper = styled.div`
   display: flex;
-  overflow: scroll;
-  padding-bottom: 0.8rem;
   gap: 0.5rem;
-`
-
-export const Tag = styled.div`
-  font-size: 80%;
-  background-color: red;
-  padding: 0.25rem 0.5rem;
-  border-radius: 5px;
-  color: ${({ theme }) => theme.colors.typografy.description};
+  height: 18px;
 `
 
 export const EndContainer = styled.div`

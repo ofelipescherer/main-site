@@ -11,6 +11,8 @@ import {
 } from 'types/MyProjects'
 import * as S from './styles'
 import Link from 'next/link'
+import ProjectCardTag from './ProjectCardTag'
+import { Tags } from '../dataTag'
 
 type CardProjectComponent = {
   card: CardProject
@@ -39,48 +41,50 @@ export default function ProjectCard({ card }: CardProjectComponent) {
         {CardProjectType[card.type]}
       </S.CardType>
 
-      <S.CardImage src={card.image} alt="Image Project" width={0} height={0} />
+      <S.ImageContainer>
+        <S.CardImage
+          src={card.image}
+          alt="Image Project"
+          width={0}
+          height={0}
+        />
+        <S.TagToggleButton onClick={handleTagsOpen}>
+          {tagsOpen ? (
+            <S.TagTitleContainer>
+              <span>Esconder Tags</span>
+              <ChevronDown color={theme.colors.default.white} />
+            </S.TagTitleContainer>
+          ) : (
+            <S.TagTitleContainer>
+              <span>Mostrar Tags</span>
+              <ChevronUp color={theme.colors.default.white} />
+            </S.TagTitleContainer>
+          )}
+        </S.TagToggleButton>{' '}
+      </S.ImageContainer>
 
       <S.Container>
         <S.HeaderContainer>
           <S.TitleContainer>
             <S.CardTitle>{card.title}</S.CardTitle>
-            <S.CardDate>{cardDate}</S.CardDate>
+            {
+              <S.TagWrapper>
+                {tagsOpen ? (
+                  card.tags.map((tag) => (
+                    <ProjectCardTag
+                      key={`${card.id}-${tag}`}
+                      tag={Tags[tag as string]}
+                    />
+                  ))
+                ) : (
+                  <S.CardDate>{cardDate}</S.CardDate>
+                )}
+              </S.TagWrapper>
+            }
           </S.TitleContainer>
-          <span onClick={handleTagsOpen}>
-            {tagsOpen ? (
-              <S.TagTitleContainer>
-                <span>Esconder Tags</span>
-                <ChevronDown color={theme.colors.typografy.description} />
-              </S.TagTitleContainer>
-            ) : (
-              <S.TagTitleContainer>
-                <span>Mostrar Tags</span>
-                <ChevronUp color={theme.colors.typografy.description} />
-              </S.TagTitleContainer>
-            )}
-          </span>
         </S.HeaderContainer>
 
         <S.Description>{card.description}</S.Description>
-
-        {tagsOpen ? (
-          <S.TagContainer>
-            {card.tags.map((tag) => (
-              <S.Tag
-                style={{
-                  backgroundColor: tag.backgroundColor,
-                  color: tag.color
-                }}
-                key={`${card.id}-${tag.id}`}
-              >
-                {tag.title}
-              </S.Tag>
-            ))}
-          </S.TagContainer>
-        ) : (
-          <div />
-        )}
 
         <S.EndContainer>
           <GithubIcon color={theme.colors.typografy.text} />

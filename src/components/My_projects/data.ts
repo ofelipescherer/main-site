@@ -1,5 +1,5 @@
 import { CardProject } from 'types/MyProjects'
-import { angular, figma, javascript, next, react } from './dataTag'
+// import { angular, figma, javascript, next, react } from './dataTag'
 
 export const dataCards: CardProject[] = [
   {
@@ -11,7 +11,9 @@ export const dataCards: CardProject[] = [
     description: 'Site do portifolio do felipe scherer',
     date: 1659277618000,
     github: '',
-    tags: [react, figma, javascript, next, angular, javascript, next, angular],
+    tags: [
+      'react, figma, javascript, next, angular, javascript, next, angular'
+    ],
     slug: 'portifolio'
   },
   {
@@ -23,7 +25,7 @@ export const dataCards: CardProject[] = [
     description: 'Projeto de um quiz animal com compartilhamento',
     date: 1654007218000,
     github: '',
-    tags: [figma],
+    tags: ['figma'],
     slug: 'alura-animal-quiz'
   },
   {
@@ -35,7 +37,7 @@ export const dataCards: CardProject[] = [
     description: 'lorem lorem lorem',
     date: 1643639218000,
     github: '',
-    tags: [react, figma, javascript, next, angular],
+    tags: ['react, figma, javascript, next, angular'],
     slug: 'css-header'
   },
   {

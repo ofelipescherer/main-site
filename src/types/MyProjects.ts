@@ -11,7 +11,7 @@ export type CardProject = {
   title: string
   image: string
   description: string
-  tags: Tag[]
+  tags: string[]
   date: number
   github: string
   slug: string
@@ -22,6 +22,7 @@ export type Tag = {
   title: string
   color: string
   backgroundColor: string
+  linkToProjects: string
 }
 
 export enum CardProjectType {
