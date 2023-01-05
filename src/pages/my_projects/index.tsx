@@ -46,7 +46,14 @@ export default function MyProjects({ posts }: MyProjectsProps) {
       </S.TitleContainer>
 
       <div>
-        <div>
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '2rem',
+            padding: '1rem'
+          }}
+        >
           {posts?.map((post) => (
             <ProjectCard
               key={post.fontmatterdata.id}

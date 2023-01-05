@@ -1,11 +1,14 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React from 'react'
+import React, { useContext } from 'react'
+import { ThemeContext } from 'context/theme.context'
 import * as S from './styles'
+import MoonIcon from 'icons/MoonIcon'
+import SunIcon from 'icons/SunIcon'
+import { useTheme } from 'styled-components'
 
 export const Header = () => {
   const menuItems = [
-    { title: 'News', value: 'news' },
     { title: 'My Projects', value: 'my_projects' },
     { title: 'About Me', value: 'about_me' },
     { title: 'Config', value: 'config' }
@@ -13,6 +16,9 @@ export const Header = () => {
   const middleIndex = Math.ceil(menuItems.length / 2)
   const firstHalf = menuItems.splice(0, middleIndex)
   const secondHalf = menuItems.splice(-middleIndex)
+
+  const { toggleTheme, theme } = useContext(ThemeContext)
+  const themeColors = useTheme()
 
   const router = useRouter()
   const [menuSelected, setMenuSelected] = React.useState<string>(
@@ -28,6 +34,13 @@ export const Header = () => {
       router.events.off('routeChangeStart', handleRouteChange)
     }
   }, [router.events])
+
+  function changeTheme() {
+    // const themes = ['light', 'dark', 'desert', 'green']
+
+    // toggleTheme(themes[Math.floor(Math.random() * themes.length)])
+    toggleTheme(theme === 'light' ? 'dark' : 'light')
+  }
 
   return (
     <header>
@@ -61,6 +74,14 @@ export const Header = () => {
             </Link>
           )
         })}
+
+        <button onClick={changeTheme}>
+          {theme === 'light' ? (
+            <MoonIcon color={themeColors.colors.typografy.title} />
+          ) : (
+            <SunIcon color={themeColors.colors.typografy.title} />
+          )}
+        </button>
       </S.Container>
     </header>
   )

@@ -36,7 +36,7 @@ export default function ProjectCard({ card }: CardProjectComponent) {
   }
 
   return (
-    <S.Wraper style={{ border: `3px solid ${CardProjectColors[card.type]}` }}>
+    <S.Wraper>
       <S.CardType style={{ backgroundColor: CardProjectColors[card.type] }}>
         {CardProjectType[card.type]}
       </S.CardType>
