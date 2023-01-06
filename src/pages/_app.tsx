@@ -7,6 +7,9 @@ import { appConfig } from 'util/config'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
+import 'simplebar-react/dist/simplebar.min.css'
+import 'react-indiana-drag-scroll/dist/style.css'
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider>

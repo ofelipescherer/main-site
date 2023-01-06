@@ -13,6 +13,8 @@ import * as S from './styles'
 import Link from 'next/link'
 import ProjectCardTag from './ProjectCardTag'
 import { Tags } from '../dataTag'
+import { useScrollContainer } from 'react-indiana-drag-scroll'
+import SimpleBar from 'simplebar-react'
 
 type CardProjectComponent = {
   card: CardProject
@@ -22,7 +24,7 @@ export default function ProjectCard({ card }: CardProjectComponent) {
   const theme = useTheme()
   const [cardDate, setCardDate] = React.useState('')
   const [tagsOpen, setTagsOpen] = React.useState(false)
-
+  const { ref } = useScrollContainer()
   React.useEffect(() => {
     if (card?.date) {
       const date = new Date(card.date)
@@ -70,12 +72,23 @@ export default function ProjectCard({ card }: CardProjectComponent) {
             {
               <S.TagWrapper>
                 {tagsOpen ? (
-                  card.tags.map((tag) => (
-                    <ProjectCardTag
-                      key={`${card.id}-${tag}`}
-                      tag={Tags[tag as string]}
-                    />
-                  ))
+                  <SimpleBar scrollableNodeProps={{ ref }}>
+                    <div
+                      style={{
+                        flexShrink: 0,
+                        display: 'flex',
+                        borderBottom: '1px solid red',
+                        minHeight: '50px'
+                      }}
+                    >
+                      {card.tags.map((tag) => (
+                        <ProjectCardTag
+                          key={`${card.id}-${tag}`}
+                          tag={Tags[tag as string]}
+                        />
+                      ))}
+                    </div>
+                  </SimpleBar>
                 ) : (
                   <S.CardDate>{cardDate}</S.CardDate>
                 )}
