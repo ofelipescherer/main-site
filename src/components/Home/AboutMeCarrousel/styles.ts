@@ -31,4 +31,6 @@ export const Wraper = styled.div.attrs(({ id = '#' }: Attrs) => ({
   gap: 1rem;
   height: 100vh;
   padding-top: 20%;
+  max-width: 1000px;
+  margin: auto;
 `

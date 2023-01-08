@@ -7,7 +7,6 @@ export const Container = styled.div`
 `
 
 export const Contain = styled.div`
-  max-width: 1000px;
   overflow: hidden;
   margin: auto;
   z-index: 10;

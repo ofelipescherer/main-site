@@ -13,6 +13,9 @@ export const Wraper = styled.div.attrs(({ id = '#' }: Attrs) => ({
   margin-top: 5rem;
   height: 100vh;
   padding-top: 10%;
+  max-width: 1000px;
+  margin: auto;
+  width: 100%;
 `
 
 export const TitleContainer = styled.div`

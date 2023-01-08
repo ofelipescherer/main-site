@@ -8,7 +8,9 @@ export default function Home() {
     <>
       <S.MainContent>
         <Meet />
-        <AboutMeCarrousel id={'aboutMe'} />
+        <S.BackgroundEffect>
+          <AboutMeCarrousel id={'aboutMe'} />
+        </S.BackgroundEffect>
         <ProjectsCarrousel id={'myProjects'} />
       </S.MainContent>
     </>

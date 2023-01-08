@@ -1,5 +1,4 @@
 import ArrowDown from 'icons/ArrowDown'
-import CollegeIcon from 'icons/College/indext'
 import { useTheme } from 'styled-components'
 import TitleCarrousel from '../TitleCarrousel'
 import { AboutMeCarrouselCard } from './AboutMeCarrouselCard'
@@ -18,23 +17,26 @@ export const AboutMeCarrousel = ({ id }: AboutMe) => {
       description: 'By Unip Campinas Swift 2022',
       image:
         'https://user-images.githubusercontent.com/62115215/208220161-87997c39-7737-438a-b8af-4b6dea50bd30.jpg',
-      icon: <CollegeIcon color={theme.colors.typografy.text} />
+      icon: '🎓',
+      iconDesc: 'Graduation cap'
     },
     {
       id: 2,
       title: 'Degree Tecnical Eletronics',
       description: 'By Rosa Perrone Scavonne 2019',
       image:
-        'https://user-images.githubusercontent.com/62115215/208220161-87997c39-7737-438a-b8af-4b6dea50bd30.jpg',
-      icon: <CollegeIcon color={theme.colors.typografy.text} />
+        'https://user-images.githubusercontent.com/62115215/211218338-7395b102-a563-4398-8816-e761aac3cb14.png',
+      icon: '🧑‍💻',
+      iconDesc: '	Technologist'
     },
     {
       id: 3,
       title: 'Courses',
       description: 'External Courses',
       image:
-        'https://user-images.githubusercontent.com/62115215/208220161-87997c39-7737-438a-b8af-4b6dea50bd30.jpg',
-      icon: <CollegeIcon color={theme.colors.typografy.text} />
+        'https://user-images.githubusercontent.com/62115215/211218684-a75b9129-da5c-4ac8-b364-28060ebaa916.png',
+      icon: '🪴',
+      iconDesc: 'Potted plant'
     }
   ]
 

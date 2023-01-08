@@ -9,6 +9,9 @@ export const WraperNextPage = styled.div`
   height: calc(100vh - 60px - 1rem);
   padding-top: 20%;
   height: 100vh;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
 `
 
 export const Wrapper = styled.div`

@@ -8,6 +8,7 @@ export const Wraper = styled.div`
   overflow: hidden;
   position: relative;
   color: ${({ theme }) => theme.colors.typografy.text};
+  fill: ${({ theme }) => theme.colors.typografy.text};
   background-color: ${({ theme }) => theme.colors.background.foreground};
 `
 
@@ -23,12 +24,18 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  color: ${({ theme }) => theme.colors.typografy.text};
 `
 
-export const CardIcon = styled.div`
+export const CardIcon = styled.span`
   position: absolute;
+  font-size: 200%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
-  padding: 0.25rem;
   margin-left: 0.25rem;
   top: -2rem;
   width: 3.5rem;

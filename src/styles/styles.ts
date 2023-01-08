@@ -10,3 +10,7 @@ export const MainContent = styled.main`
   /* align-items: center; */
   gap: 1rem;
 `
+
+export const BackgroundEffect = styled.div`
+  background-color: ${({ theme }) => theme.colors.main.primary_01}30;
+`

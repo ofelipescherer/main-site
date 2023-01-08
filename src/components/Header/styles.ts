@@ -9,6 +9,8 @@ export const Container = styled.ul`
   justify-content: space-between;
   align-items: center;
   padding-top: 0.5rem;
+  max-width: 1000px;
+  margin: auto;
 `
 
 export const MenuItem = styled.li`

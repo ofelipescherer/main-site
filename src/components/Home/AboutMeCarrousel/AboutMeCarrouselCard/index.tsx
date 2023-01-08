@@ -1,16 +1,9 @@
 import React from 'react'
+import { AboutMeCard } from 'types/AboutMe'
 import * as S from './styles'
 
 type ItemCard = {
-  item: Card
-}
-
-type Card = {
-  id: number
-  title: string
-  description: string
-  image: string
-  icon: React.ReactNode
+  item: AboutMeCard
 }
 
 export const AboutMeCarrouselCard = ({ item }: ItemCard) => {
