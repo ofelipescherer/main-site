@@ -1,9 +1,17 @@
 import React from 'react'
-import { AboutMeCard } from 'types/AboutMe'
 import * as S from './styles'
 
+type Card = {
+  id: number
+  image: string
+  title: string
+  icon: string
+  iconDesc: string
+  description: string
+}
+
 type ItemCard = {
-  item: AboutMeCard
+  item: Card
 }
 
 export const AboutMeCarrouselCard = ({ item }: ItemCard) => {
@@ -16,7 +24,7 @@ export const AboutMeCarrouselCard = ({ item }: ItemCard) => {
         width={300}
       />
       <S.Container>
-        <S.CardIcon>{item.icon}</S.CardIcon>
+        <S.CardIcon aria-label={item.iconDesc}>{item.icon}</S.CardIcon>
         <S.CardTitle>{item.title}</S.CardTitle>
         <S.CardDescription>{item.description}</S.CardDescription>
       </S.Container>
