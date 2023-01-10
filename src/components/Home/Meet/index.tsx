@@ -1,20 +1,16 @@
 import { i18n } from 'i18n'
 import ArrowDown from 'icons/ArrowDown'
-import { useRouter } from 'next/router'
 import { useTheme } from 'styled-components'
 import * as S from './styles'
 
 export const Meet = () => {
   const theme = useTheme()
-  const { locale } = useRouter()
-
-  if (!locale) return <>Loading Locale...</>
 
   return (
     <S.WraperNextPage>
       <S.Wrapper>
         <S.Container>
-          <S.MeetText>{i18n[locale].homePageTitle}</S.MeetText>
+          <S.MeetText>{i18n['en-US'].homePageTitle}</S.MeetText>
           <S.Title>Felipe Scherer</S.Title>
           <S.Subtitle>Frontend Developer</S.Subtitle>
 

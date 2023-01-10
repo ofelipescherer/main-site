@@ -6,6 +6,7 @@ import * as S from './styles'
 import MoonIcon from 'icons/MoonIcon'
 import SunIcon from 'icons/SunIcon'
 import { useTheme } from 'styled-components'
+import { locales } from 'i18n'
 
 export const Header = () => {
   const menuItems = [
@@ -20,8 +21,12 @@ export const Header = () => {
   const { toggleTheme, theme } = useContext(ThemeContext)
   const themeColors = useTheme()
 
-  const { route, events, locale, locales, asPath } = useRouter()
+  const { route, events } = useRouter()
   const [menuSelected, setMenuSelected] = React.useState<string>(route.slice(1))
+
+  // Fazer context para isso aqui de linguagem
+  const [selectedLanguage, setSelectedLanguage] =
+    React.useState<string>('en-US')
 
   React.useEffect(() => {
     const handleRouteChange = (url: string) => {
@@ -38,6 +43,10 @@ export const Header = () => {
 
     // toggleTheme(themes[Math.floor(Math.random() * themes.length)])
     toggleTheme(theme === 'light' ? 'dark' : 'light')
+  }
+
+  function handleLanguage(language: string) {
+    setSelectedLanguage(language)
   }
 
   return (
@@ -83,13 +92,17 @@ export const Header = () => {
 
         <div>
           {locales &&
-            locales.map((l, i) => {
+            locales.map((language) => {
               return (
-                <span key={i} style={{ color: l === locale ? 'red' : 'blue' }}>
-                  <Link href={asPath} locale={l}>
-                    {l}
-                  </Link>
-                </span>
+                <button
+                  key={language}
+                  style={{
+                    color: language === selectedLanguage ? 'red' : 'blue'
+                  }}
+                  onClick={() => handleLanguage(language)}
+                >
+                  {language}
+                </button>
               )
             })}
         </div>
