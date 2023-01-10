@@ -9,6 +9,11 @@ const nextConfig = {
     domains: ['user-images.githubusercontent.com', 'images.unsplash.com']
   },
 
+  i18n: {
+    locales: ['en-US', 'pt-BR', 'it'],
+    defaultLocale: 'it'
+  },
+
   webpack: (config) => {
     config.module.rules.push({
       test: /\.md$/,

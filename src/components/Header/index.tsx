@@ -20,20 +20,18 @@ export const Header = () => {
   const { toggleTheme, theme } = useContext(ThemeContext)
   const themeColors = useTheme()
 
-  const router = useRouter()
-  const [menuSelected, setMenuSelected] = React.useState<string>(
-    router.route.slice(1)
-  )
+  const { route, events, locale, locales, asPath } = useRouter()
+  const [menuSelected, setMenuSelected] = React.useState<string>(route.slice(1))
 
   React.useEffect(() => {
     const handleRouteChange = (url: string) => {
       setMenuSelected(url.slice(1))
     }
-    router.events.on('routeChangeStart', handleRouteChange)
+    events.on('routeChangeStart', handleRouteChange)
     return () => {
-      router.events.off('routeChangeStart', handleRouteChange)
+      events.off('routeChangeStart', handleRouteChange)
     }
-  }, [router.events])
+  }, [events])
 
   function changeTheme() {
     // const themes = ['light', 'dark', 'desert', 'green']
@@ -82,6 +80,19 @@ export const Header = () => {
             <SunIcon color={themeColors.colors.typografy.title} />
           )}
         </button>
+
+        <div>
+          {locales &&
+            locales.map((l, i) => {
+              return (
+                <span key={i} style={{ color: l === locale ? 'red' : 'blue' }}>
+                  <Link href={asPath} locale={l}>
+                    {l}
+                  </Link>
+                </span>
+              )
+            })}
+        </div>
       </S.Container>
     </header>
   )
