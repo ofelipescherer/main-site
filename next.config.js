@@ -10,8 +10,8 @@ const nextConfig = {
   },
 
   i18n: {
-    locales: ['en-US', 'pt-BR', 'it'],
-    defaultLocale: 'it'
+    locales: ['en-US', 'pt-BR'],
+    defaultLocale: 'en-US'
   },
 
   webpack: (config) => {
